@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "yarns",
+  "info": {
+    "singularName": "yarn",
+    "pluralName": "yarns",
+    "displayName": "Yarn",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "amount": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "link_url": {
+      "type": "string",
+      "regex": "^(http(s):\\/\\/.)[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patterns",
+  "info": {
+    "singularName": "pattern",
+    "pluralName": "patterns",
+    "displayName": "pattern",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_title": {
+      "type": "string",
+      "required": true
+    },
+    "pattern_type": {
+      "type": "enumeration",
+      "enum": [
+        "Tunna Sockor",
+        "Tjocka Sockor",
+        "Ankelsockor",
+        "Vantar",
+        "Mössa",
+        "Accessoar",
+        "Sjal",
+        "Tröja"
+      ],
+      "required": true
+    },
+    "sizes": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "material": {
+      "displayName": "materials",
+      "type": "component",
+      "repeatable": true,
+      "component": "materials.materials"
+    },
+    "yarn_price": {
+      "type": "string",
+      "required": false,
+      "regex": "^(\\d)+(-(\\d)+)?$"
+    },
+    "description_title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link_url": {
+      "type": "string",
+      "regex": "^(http(s):\\/\\/.)[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$",
+      "required": true
+    }
+  }
+}
